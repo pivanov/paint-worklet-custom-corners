@@ -1,0 +1,19 @@
+/* src/tailwind.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.tab {
+  @apply transition-colors duration-300;
+  @apply cursor-pointer;
+
+  @supports (background: paint(something)) {
+    --corner-radius: 12px 12px -10px -10px;
+    --background-color: #ffffffcc;
+    background-image: paint(custom-corners);
+
+    &.active {
+      --background-color: #fff;
+    }
+  }
+}
